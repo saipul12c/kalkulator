@@ -1,0 +1,12 @@
+{
+  "name": "kalkulator-sederhana",
+  "version": "1.0.0",
+  "description": "Proyek ini adalah kalkulator sederhana yang dibangun menggunakan HTML, CSS, dan JavaScript. Kalkulator ini memiliki tampilan yang bersih dan fungsional untuk operasi dasar seperti penjumlahan, pengurangan, perkalian, dan pembagian.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
