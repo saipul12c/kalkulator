@@ -1,32 +1,60 @@
+/* Desain Umum */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
 }
 
-.calculator {
-    width: 300px;
+/* Header */
+header {
+    width: 100%;
+    text-align: center;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 8px 8px 0 0;
 }
 
+/* Kalkulator */
+.calculator {
+    width: 350px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Display */
 #display {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
     text-align: right;
-    font-size: 24px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f7f7f7;
+    font-size: 32px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+/* Pesan Error */
+.error-message {
+    color: #e74c3c;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Tombol */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -35,18 +63,68 @@ body {
 
 .btn {
     padding: 20px;
-    font-size: 18px;
-    border: none;
-    background-color: #f1f1f1;
+    font-size: 22px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #ddd;
+    background-color: #d0d0d0;
 }
 
 .btn:active {
-    background-color: #ccc;
+    background-color: #b0b0b0;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+button:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+/* Mode Gelap */
+body.dark-mode {
+    background-color: #333;
+}
+
+.calculator.dark-mode {
+    background-color: #444;
+}
+
+#display.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+button.dark-mode {
+    background-color: #555;
+    color: #fff;
+}
+
+button.dark-mode:hover {
+    background-color: #666;
+}
+
+/* Toggle Tema */
+.theme-toggle {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
 }
